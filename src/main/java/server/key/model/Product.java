@@ -4,9 +4,9 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name="products")
 @Data
-public class ProductEntity {
+@Table(name="products")
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
@@ -19,7 +19,7 @@ public class ProductEntity {
     String status;
     @Column(name="category")
     String category;
-    @Column(name="linkForBuy")
+    @Column(name="link_for_buy")
     String link;
 //    @Column(name="data")
 //    private byte[] data;
