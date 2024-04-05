@@ -33,3 +33,18 @@ services:
       retries: 5
       start_period: 15s
       timeout: 10s
+#  minio-bucket:
+#    container_name: 'minio-bucket'
+#    image: minio/mc # import the minio mc
+#    depends_on:
+#      - minio # ensure that minio is built before attempting to execute.
+#    environment:
+#      AWS_ACCESS_KEY_ID: "key"
+#      AWS_SECRET_ACCESS_KEY: "key"
+#      AWS_BUCKET: "images"
+##      AWS_ENDPOINT: ${AWS_ENDPOINT}
+#    volumes:
+#      - './docker/minio:/etc/minio'
+#    networks:
+#      - sail
+##    entrypoint: /etc/minio/create.sh

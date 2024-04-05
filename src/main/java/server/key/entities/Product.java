@@ -1,10 +1,14 @@
-package server.key.model;
+package server.key.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name="products")
 public class Product {
     @Id
@@ -21,11 +25,9 @@ public class Product {
     String category;
     @Column(name="link_for_buy")
     String link;
-//    @Column(name="data")
-//    private byte[] data;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_image")
-    private ImageEntity image;
+    private List<Image> image;
 
 }

@@ -1,20 +1,24 @@
-package server.key.model;
+package server.key.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name="images")
-@Data
-public class ImageEntity {
-    @jakarta.persistence.Id
+@Getter
+@Setter
+@Builder
+public class Image {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
     @Column(name="name")
     String name;
-    @Column(name="data")
-    private byte[] data;
+    @Column(name="link")
+    private String link;
 
     private String contentType;
 }

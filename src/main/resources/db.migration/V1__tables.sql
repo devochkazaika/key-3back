@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS images  (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    data BYTEA -- тип данных для хранения бинарных данных
+    link Varchar(255)
 );
 
 CREATE TABLE IF NOT EXISTS products (

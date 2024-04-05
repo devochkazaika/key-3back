@@ -2,12 +2,13 @@ server:
     port: 8080
 
 spring:
+
     datasource:
         url: jdbc:postgresql://localhost:5430/key
         username: superuser
         password: 229csx229CSX
     thymeleaf:
-        enabled=false:
+        enabled: false
     flyway:
         enabled: true
         locations:
