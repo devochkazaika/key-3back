@@ -23,17 +23,23 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//	implementation group: 'org.springframework', name: 'spring-jdbc', version: '3.1.0.RELEASE'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'software.amazon.awssdk:bom:2.10.86'
 	//для загрузки файлов
-	implementation 'commons-fileupload:commons-fileupload:1.4'
-	implementation 'commons-io:commons-io:2.6'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'org.postgresql:postgresql'
 	implementation 'org.flywaydb:flyway-core'
 	annotationProcessor 'org.projectlombok:lombok'
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-validator
+	implementation group: 'org.hibernate', name: 'hibernate-validator', version: '7.0.5.Final'
+	// https://mvnrepository.com/artifact/org.mapstruct/mapstruct
+	implementation group: 'org.mapstruct', name: 'mapstruct', version: '1.5.5.Final'
+	// https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api
+	implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 }

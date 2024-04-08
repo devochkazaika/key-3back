@@ -1,4 +1,4 @@
-package server.key.entities;
+package server.key.entities.product;
 
 import jakarta.persistence.*;
 import lombok.Getter;

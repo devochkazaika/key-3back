@@ -1,6 +1,6 @@
 package server.key.security;
 
-public enum Roles {
+public enum Role {
     ROLE_USER,
     ROLE_ADMIN
 }

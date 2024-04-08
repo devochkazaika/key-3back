@@ -1,4 +1,4 @@
-package server.key.entities;
+package server.key.entities.product;
 
 public enum Status {
     Exist,
